@@ -1,0 +1,35 @@
+{
+  "name": "mpesa_backend",
+  "version": "1.0.0",
+  "description": "M-pesa backend server for handling payment processing and API interactions.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "ngrok": "npx ngrok http 3000 --config ./ngrok.yml",
+    "dev:ngrok": "npx concurrently \"npm start\" \"npm run ngrok\"",
+    "test": "node --test"
+  },
+  "keywords": [
+    "mpesa",
+    "backend",
+    "payment",
+    "processing",
+    "api",
+    "express",
+    "nodejs"
+  ],
+  "author": "Stallen Nyaemo",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.14.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.0",
+    "ngrok": "^5.0.0-beta.2"
+  }
+}
