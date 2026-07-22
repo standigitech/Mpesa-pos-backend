@@ -132,6 +132,29 @@ heroku config:set CONSUMER_SECRET=your_secret
 
 > Note: This project stores the backend inside the `mpesa_backend` folder. If you connect a GitHub repository directly, set the service or build root to `mpesa_backend` so Heroku/Railway/Render deploys the correct app.
 
+### Option 4: Render Deployment
+
+Render can deploy this repository using `render.yaml`. Use the root `render.yaml` or the `render-backend-root.yaml` variant if you want an explicit service root of `mpesa_backend`.
+
+The root manifest uses Render secret environment variables for sensitive values. Set these secret names in the Render dashboard:
+
+```text
+mpesa_consumer_key
+mpesa_consumer_secret
+mpesa_shortcode
+mpesa_passkey
+mpesa_callback_url
+```
+
+Then configure these standard environment variables in Render:
+
+```text
+NODE_ENV=production
+MPESA_API_URL=https://api.safaricom.co.ke
+```
+
+Render will supply the runtime `PORT` automatically.
+
 ## Monitoring
 
 ### Check PM2 Status

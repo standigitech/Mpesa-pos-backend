@@ -1,11 +1,11 @@
 services:
   - type: web
-    name: mpesa-backend
+    name: mpesa-backend-root
     env: node
     branch: master
     region: oregon
     plan: starter
-    root: /
+    root: mpesa_backend
     buildCommand: npm install
     startCommand: npm start
     healthCheckPath: /api/health
