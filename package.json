@@ -7,6 +7,6 @@
     "postinstall": "cd mpesa_backend && npm install --production"
   },
   "engines": {
-    "node": ">=18"
+    "node": "24.14.1"
   }
 }
