@@ -1,0 +1,6 @@
+version: "2"
+authtoken: "3BOO8KWsAzv5j9DeWVvOzQ7gme1_2KgKLDMNF4QNUE7Jr2JUx"
+tunnels:
+  mpesa_backend:
+    proto: http
+    addr: 3000

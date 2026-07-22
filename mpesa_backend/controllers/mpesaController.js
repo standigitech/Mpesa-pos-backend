@@ -84,11 +84,11 @@ async function stkPush(req, res) {
             TransactionDesc: 'Payment'
         };
 
-        const response = await axios.post(
+const response = await axios.post(
             `${mpesaBaseUrl}/mpesa/stkpush/v1/processrequest`,
             payload,
             {
-                headers: { Authorization: `Bearer ${req.token}` },
+                headers: { Authorization: 'Bearer ' + req.token },
                 timeout: 10000
             }
         );

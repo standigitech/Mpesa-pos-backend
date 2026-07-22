@@ -1,0 +1,175 @@
+:root {
+  --green: #00a651;
+  --green-dark: #037a3d;
+  --ink: #0f172a;
+  --ink-soft: #475569;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --warning: #f59e0b;
+  --border: #e2e8f0;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #ecfdf5 0%, var(--bg) 100%);
+  color: var(--ink);
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: var(--ink);
+  color: white;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--green);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 20px;
+}
+.brand h1 { margin: 0; font-size: 18px; }
+.brand p { margin: 2px 0 0; color: #cbd5e1; }
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #cbd5e1;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+.nav-links a.active, .nav-links a:hover {
+  background: rgba(255,255,255,0.12);
+  color: white;
+}
+
+.sidebar-card {
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 16px;
+  background: rgba(255,255,255,0.06);
+}
+.sidebar-card h3 { margin: 4px 0; }
+.sidebar-card p { margin: 0; color: #cbd5e1; }
+
+.main-panel {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  color: var(--green-dark);
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+.ghost-btn, .primary-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.ghost-btn {
+  background: #e2f8ee;
+  color: var(--green-dark);
+}
+.primary-btn {
+  background: var(--green);
+  color: white;
+  width: 100%;
+  margin-top: 8px;
+}
+.hero-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+.payment-form label { display: block; margin-bottom: 12px; font-weight: 600; }
+.payment-form input {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 16px;
+}
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+}
+.stat-card.accent {
+  border-color: rgba(0,166,81,.25);
+  background: linear-gradient(135deg, #f0fdf6 0%, #ffffff 100%);
+}
+.stat-card h3 { margin: 4px 0; font-size: 1.35rem; }
+.stat-card span { color: var(--ink-soft); font-size: 0.95rem; }
+.transactions-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+}
+.section-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.section-heading a { color: var(--green-dark); text-decoration: none; font-weight: 600; }
+.transactions-panel ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.transactions-panel li {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 12px 14px; border-radius: 12px; background: #f8fafc;
+}
+.pill {
+  padding: 6px 10px; border-radius: 999px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase;
+}
+.pill.success { background: #dcfce7; color: #166534; }
+.pill.pending { background: #fef3c7; color: #92400e; }
+.pill.failed { background: #fee2e2; color: #b91c1c; }
+
+@media (max-width: 920px) {
+  .app-shell { grid-template-columns: 1fr; }
+  .sidebar { order: 2; }
+  .hero-card { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; }
+}

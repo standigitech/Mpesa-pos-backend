@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M-Pesa Quickpay</title>
+    <link rel="stylesheet" href="styles/ux-ui.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">M</div>
+          <div>
+            <h1>M-Pesa POS</h1>
+            <p>Merchant Studio</p>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a class="active" href="#">Quick Pay</a>
+          <a href="#">Transactions</a>
+          <a href="#">Reports</a>
+          <a href="#">Settings</a>
+        </nav>
+
+        <div class="sidebar-card">
+          <p class="eyebrow">Status</p>
+          <h3>Online</h3>
+          <p>Gateway connected</p>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Good afternoon</p>
+            <h2>Welcome back, STALLEN</h2>
+          </div>
+          <button class="ghost-btn">Need help?</button>
+        </header>
+
+        <section class="hero-card">
+          <div class="hero-copy">
+            <p class="eyebrow">Quick Payment</p>
+            <h3>Send a secure STK push</h3>
+            <p>Fast, reliable checkout for retail payments and service bills.</p>
+          </div>
+
+          <div class="payment-form">
+            <label>
+              Phone Number
+              <input type="text" value="254 712 345 678" />
+            </label>
+            <label>
+              Amount
+              <input type="text" value="KSH 1,500" />
+            </label>
+            <button class="primary-btn">Pay Now</button>
+          </div>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card accent">
+            <p>Today</p>
+            <h3>24</h3>
+            <span>Successful payments</span>
+          </article>
+          <article class="stat-card">
+            <p>Pending</p>
+            <h3>3</h3>
+            <span>Awaiting confirmation</span>
+          </article>
+          <article class="stat-card">
+            <p>Volume</p>
+            <h3>KSH 86k</h3>
+            <span>Today’s sales</span>
+          </article>
+        </section>
+
+        <section class="transactions-panel">
+          <div class="section-heading">
+            <h3>Recent Activity</h3>
+            <a href="#">View all</a>
+          </div>
+          <ul>
+            <li>
+              <span class="pill success">Success</span>
+              <strong>254 712 345 678</strong>
+              <em>KSH 1,500</em>
+            </li>
+            <li>
+              <span class="pill pending">Pending</span>
+              <strong>254 722 110 404</strong>
+              <em>KSH 800</em>
+            </li>
+            <li>
+              <span class="pill failed">Failed</span>
+              <strong>254 700 100 999</strong>
+              <em>KSH 300</em>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

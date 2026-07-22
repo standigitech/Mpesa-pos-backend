@@ -2,7 +2,10 @@
   "name": "mpesa_backend",
   "version": "1.0.0",
   "description": "M-pesa backend server for handling payment processing and API interactions.",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",

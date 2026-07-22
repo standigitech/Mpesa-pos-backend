@@ -1,0 +1,12 @@
+{
+  "name": "Mpesa-pos-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "cd mpesa_backend && npm start",
+    "postinstall": "cd mpesa_backend && npm install --production"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

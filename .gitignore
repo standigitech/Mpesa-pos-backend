@@ -1,0 +1,26 @@
+# Root-level Gradle user-home data generated during Android builds
+/android/
+/caches/
+/daemon/
+/jdks/
+/native/
+/wrapper/
+
+# Local tool state
+/.tmp/
+
+# JavaScript dependencies and build output
+**/node_modules/
+**/dist/
+
+# Android/Gradle build artifacts
+**/.gradle/
+**/build/
+*.apk
+*.aab
+
+# Logs and local environment files
+*.log
+.env
+.env.*
+!.env.example
