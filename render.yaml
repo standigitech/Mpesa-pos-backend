@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: mpesa-backend
+    env: node
+    branch: master
+    region: oregon
+    plan: starter
+    root: /
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: ""
+      - key: CONSUMER_KEY
+        value: ""
+      - key: CONSUMER_SECRET
+        value: ""
+      - key: SHORTCODE
+        value: ""
+      - key: PASSKEY
+        value: ""
+      - key: CALLBACK_URL
+        value: ""
+      - key: MPESA_API_URL
+        value: "https://api.safaricom.co.ke"
